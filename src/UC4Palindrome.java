@@ -1,8 +1,8 @@
-import java.util.* ;
+import java.util.*;
 
-public class UC2Palindrome {
+public class UC3Palindrome {
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
 
         System.out.println("Welcome to the Palindrome Checker Management System");
         System.out.println("Version : 1.0");
@@ -15,15 +15,14 @@ public class UC2Palindrome {
 
         boolean isPalindrome = true;
 
-        // REQUIRED LOOP (checks only till half of string)
-        for (int i = 0; i < input.length() / 2; i++) {
+        // Convert the input string to a character array
+        char[] chars = input.toCharArray();
 
-            char startChar = input.charAt(i);
-            char endChar = input.charAt(input.length() - 1 - i);
-
-            if (startChar != endChar) {
+        // Check palindrome using character array
+        for (int i = 0; i < chars.length / 2; i++) {
+            if (chars[i] != chars[chars.length - 1 - i]) {
                 isPalindrome = false;
-                break;   // exit loop immediately if mismatch found
+                break;  // exit loop immediately if mismatch found
             }
         }
 
@@ -31,7 +30,5 @@ public class UC2Palindrome {
         System.out.println("Is it a Palindrome? : " + isPalindrome);
 
         scanner.close();
-
-
     }
 }
