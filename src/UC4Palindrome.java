@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class UC3Palindrome {
+public class UC4Palindrome {
 
     public static void main(String[] args) {
 
